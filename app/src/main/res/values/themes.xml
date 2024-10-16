@@ -2,6 +2,10 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Mad_Assignment" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorAccent">@color/grey3</item>
+
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 

@@ -3,4 +3,7 @@
     <string name="add">Addition</string>
     <string name="mul">Multiply</string>
     <string name="sub">Subtraction</string>
+    <string name="ok">OK</string>
+    <string name="next">NEXT
+    </string>
 </resources>
