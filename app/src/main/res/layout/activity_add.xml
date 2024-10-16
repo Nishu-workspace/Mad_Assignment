@@ -114,6 +114,7 @@
                 android:layout_margin="5dp"
                 android:gravity="center"
                 android:hint="Enter your answer here"
+                android:inputType="number"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
