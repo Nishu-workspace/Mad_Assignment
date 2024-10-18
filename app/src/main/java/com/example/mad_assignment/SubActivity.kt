@@ -1,8 +1,6 @@
 package com.example.mad_assignment
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -11,36 +9,29 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.google.android.material.card.MaterialCardView
 import kotlin.random.Random
 
-class AddActivity : AppCompatActivity() {
- lateinit var textScore : TextView
- lateinit var textLife : TextView
- lateinit var textTimer : TextView
- lateinit var editTextAnswer : EditText
- lateinit var buttonOk : Button
- lateinit var buttonNext : Button
- lateinit var textQuestion : TextView
- lateinit var gameOverCard: MaterialCardView
- lateinit var buttonGameOver : Button
- var correctAnswer = 0
- var userScore = 0
- var totalLife = 3
+class SubActivity : AppCompatActivity() {
+    lateinit var textScore : TextView
+    lateinit var textLife : TextView
+    lateinit var textTimer : TextView
+    lateinit var editTextAnswer : EditText
+    lateinit var buttonOk : Button
+    lateinit var buttonNext : Button
+    lateinit var textQuestion : TextView
+    var correctAnswer = 0 // To store the correct Answer
+    var userScore = 0  // To Store the user's score for session
+    var totalLife = 3 // Total Life of user.
 
-        override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_add)
+        setContentView(R.layout.activity_sub)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        gameOverCard = findViewById(R.id.gameOverCard)
-        gameOverCard.setVisibility(View.GONE)
-        buttonGameOver = findViewById(R.id.buttonGameOver)
-
         textScore = findViewById(R.id.textViewScoreCount)
         textLife = findViewById(R.id.textViewLiveCount)
         textTimer = findViewById(R.id.textViewTimeCount)
@@ -66,13 +57,6 @@ class AddActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext, "Wrong Answer!!", Toast.LENGTH_LONG).show()
                     totalLife--
                     textLife.text = "$totalLife"
-                    if(totalLife == 0){
-                        gameOverCard.setVisibility(View.VISIBLE)
-                        buttonGameOver.setOnClickListener{
-                            val intent = Intent(this,MainActivity::class.java)
-                            startActivity(intent)
-                        }
-                    }
                 }
             }
         }
@@ -83,12 +67,21 @@ class AddActivity : AppCompatActivity() {
         }
 
 
+
     }
     fun gameContinue(){
         val number1 = Random.nextInt(0,100)
         val number2 = Random.nextInt(0,100)
-        textQuestion.text = "$number1 + $number2 = ?"
-        correctAnswer = number1 + number2
+        if(number1>number2){
+            textQuestion.text = "$number1 - $number2 = ?"
+            correctAnswer = number1 - number2
+        }
+        else{
+            textQuestion.text = "$number2 - $number1 = ?"
+            correctAnswer = number2 - number1
+
+        }
 
     }
+
 }

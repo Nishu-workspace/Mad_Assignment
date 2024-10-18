@@ -50,17 +50,19 @@
         app:layout_constraintStart_toStartOf="@+id/addButton"
         app:layout_constraintTop_toBottomOf="@+id/addButton" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttomMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="32dp"
-        android:checked="false"
+        style="@style/Widget.MaterialComponents.Button"
+        app:icon="@drawable/darkmode"
         android:text="Night"
-        android:textOff="Night"
-        android:textOn="Light"
+        app:iconPadding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
