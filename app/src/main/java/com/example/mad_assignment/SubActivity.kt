@@ -1,5 +1,6 @@
 package com.example.mad_assignment
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -9,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.button.MaterialButton
 import kotlin.random.Random
 
 class SubActivity : AppCompatActivity() {
@@ -19,6 +21,7 @@ class SubActivity : AppCompatActivity() {
     lateinit var buttonOk : Button
     lateinit var buttonNext : Button
     lateinit var textQuestion : TextView
+    lateinit var buttonBack : MaterialButton
     var correctAnswer = 0 // To store the correct Answer
     var userScore = 0  // To Store the user's score for session
     var totalLife = 3 // Total Life of user.
@@ -37,9 +40,15 @@ class SubActivity : AppCompatActivity() {
         textTimer = findViewById(R.id.textViewTimeCount)
         buttonOk = findViewById(R.id.buttonOk)
         buttonNext = findViewById(R.id.buttonNext)
+        buttonBack = findViewById(R.id.buttonBack)
         editTextAnswer = findViewById(R.id.editTextAnswer)
         textQuestion = findViewById(R.id.textViewQuestion)
         gameContinue()
+        buttonBack.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
         buttonOk.setOnClickListener{
 
             val userInput = editTextAnswer.text.toString()

@@ -11,10 +11,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import kotlin.random.Random
 
 class AddActivity : AppCompatActivity() {
+ lateinit var buttonBack : MaterialButton
  lateinit var textScore : TextView
  lateinit var textLife : TextView
  lateinit var textTimer : TextView
@@ -41,6 +43,7 @@ class AddActivity : AppCompatActivity() {
         gameOverCard.setVisibility(View.GONE)
         buttonGameOver = findViewById(R.id.buttonGameOver)
 
+        buttonBack = findViewById(R.id.buttonBack)
         textScore = findViewById(R.id.textViewScoreCount)
         textLife = findViewById(R.id.textViewLiveCount)
         textTimer = findViewById(R.id.textViewTimeCount)
@@ -49,6 +52,11 @@ class AddActivity : AppCompatActivity() {
         editTextAnswer = findViewById(R.id.editTextAnswer)
         textQuestion = findViewById(R.id.textViewQuestion)
         gameContinue()
+
+        buttonBack.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
         buttonOk.setOnClickListener{
 
             val userInput = editTextAnswer.text.toString()
