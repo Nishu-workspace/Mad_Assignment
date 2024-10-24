@@ -15,7 +15,7 @@
 
         android:padding="0dp"
 
-        app:icon="@drawable/arrow_back_24dp_e8eaed_fill0_wght400_grad0_opsz24_1_"
+        app:icon="@drawable/add"
         app:iconGravity="textStart"
 
         app:iconPadding="0dp"

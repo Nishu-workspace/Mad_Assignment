@@ -2,9 +2,20 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Mad_Assignment" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorSecondary">@color/black</item>
-         <item name="colorAccent">@color/grey4</item>
+        <item name="colorPrimary">@color/primaryNight</item>
+        <item name="colorPrimaryVariant">@color/accentNight</item>
+        <item name="colorOnPrimary">@color/backgroundNight</item>
+        <item name="colorSecondary">@color/secondaryNight</item>
+        <item name="colorOnSecondary">@color/backgroundNight</item>
+<!--        <item name="colorBackground">@color/backgroundNight</item>-->
+        <item name="colorOnBackground">@color/textColorNight</item>
+        <item name="colorSurface">@color/backgroundNight</item>
+        <item name="colorOnSurface">@color/textColorNight</item>
+        <item name="android:textColor">@color/textColorNight</item>
+        <item name="android:buttonStyle">@style/Widget.MaterialComponents.Button</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item  name="backgroundColorMode">@color/darkMode</item>
+        <item name="backgroundColorText"> @color/darkModeText</item>
     </style>
 </resources>

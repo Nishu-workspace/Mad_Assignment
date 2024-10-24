@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Mad_Assignment</string>
-    <string name="add">Addition</string>
-    <string name="mul">Multiply</string>
-    <string name="sub">Subtraction</string>
+    <string name="add">Add</string>
+    <string name="mul">Mul</string>
+    <string name="sub">Sub</string>
     <string name="ok">OK</string>
     <string name="next">NEXT
     </string>

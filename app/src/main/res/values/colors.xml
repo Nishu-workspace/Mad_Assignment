@@ -1,19 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="background">#F9F9F9</color>
+    <color name="primary">#007BFF</color>
+    <color name="secondary">#FFD700</color>
+    <color name="accent">#FF4500</color>
+    <color name="textColor">#333333</color>
+    <color name="buttonColor">#87CEEB</color>
+    <color name="warningColor">#FF6347</color>
+    <color name="colorAdditionButton">#FFCC80</color> <!-- Light Orange -->
+    <color name="colorMultiplyButton">#81D4FA</color> <!-- Light Blue -->
+    <color name="colorSubtractionButton">#FFAB91</color> <!-- Light Coral -->
+    <color name="lightMode">#A2D5F2</color>
+    <color name="lightModeText">#004E98</color>
 
-    <color name="black">#1C1C1C</color>
-    <color name="black1">#080808</color>
-    <color name="black2">#0c0c0c</color>
-    <color name="black3">#434343</color>
-    <color name="brownish_grey">#3A3226</color>
-    <color name="grey">#656765</color>
-    <color name="grey1">#787D7B</color>
-    <color name="grey2">#787878</color>
-    <color name="grey3">#91989F</color>
-    <color name="grey4">#BDC0BA</color>
-    <color name="white">#FEFFFB</color>
-    <color name="white1">#FBF9F2</color>
-    <color name="white2">#FAFAFA</color>
-    <color name="white3">#F3F3F3</color>
+<!--    night-->
+    <color name="backgroundNight">#1C1C1C</color>
+    <color name="primaryNight">#00BFFF</color>
+    <color name="secondaryNight">#FFD700</color>
+    <color name="accentNight">#FF7F50</color>
+    <color name="textColorNight">#EAEAEA</color>
+    <color name="buttonColorNight">#00BFFF</color>
+    <color name="warningColorNight">#F08080</color>
+    <color name="darkMode">#FFEB3B</color>
+    <color name="darkModeText">#FFFFFF</color>
+<!--    <color name="black">#1C1C1C</color>-->
+<!--    <color name="black1">#080808</color>-->
+<!--    <color name="black2">#0c0c0c</color>-->
+<!--    <color name="black3">#434343</color>-->
+<!--    <color name="brownish_grey">#3A3226</color>-->
+<!--    <color name="grey">#656765</color>-->
+<!--    <color name="grey1">#787D7B</color>-->
+<!--    <color name="grey2">#787878</color>-->
+<!--    <color name="grey3">#91989F</color>-->
+<!--    <color name="grey4">#BDC0BA</color>-->
+<!--    <color name="white">#FEFFFB</color>-->
+<!--    <color name="white1">#FBF9F2</color>-->
+<!--    <color name="white2">#FAFAFA</color>-->
+<!--    <color name="white3">#F3F3F3</color>-->
 
 </resources>

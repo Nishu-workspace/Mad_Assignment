@@ -10,59 +10,99 @@
     tools:layout_editor_absoluteX="2dp"
     tools:layout_editor_absoluteY="-3dp">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
 
         android:id="@+id/addButton"
-        android:layout_width="250dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="192dp"
-
-        android:fontFamily="@font/montserrat_semibold"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="168dp"
+        android:backgroundTint="@color/colorAdditionButton"
+        android:elevation="6dp"
+        android:fontFamily="@font/montserrat_extrabold"
+        android:isScrollContainer="false"
         android:text="@string/add"
+
+        android:textColor="@android:color/black"
+
         android:textSize="20sp"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/add"
+        app:iconGravity="textTop"
+        app:iconSize="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.201"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/subButton"
-        android:layout_width="250dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="12dp"
+        android:elevation="6dp"
+        android:textColor="@android:color/black"
+        android:backgroundTint="@color/colorSubtractionButton"
         android:fontFamily="@font/montserrat_semibold"
         android:text="@string/sub"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/mulButton"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/mulButton"
+        app:icon="@drawable/minus"
+        app:iconSize="48dp"
+        app:iconGravity="textTop"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mulButton" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/mulButton"
-        android:layout_width="250dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="20dp"
-
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:backgroundTint="@color/colorMultiplyButton"
         android:fontFamily="@font/montserrat_semibold"
         android:text="@string/mul"
+        app:icon="@drawable/multiply"
+        app:iconSize="48dp"
+        app:iconGravity="textTop"
+        android:elevation="6dp"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/addButton"
-        app:layout_constraintStart_toStartOf="@+id/addButton"
-        app:layout_constraintTop_toBottomOf="@+id/addButton" />
+        app:cornerRadius="10dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/addButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.808"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addButton"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttomMode"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="32dp"
-        style="@style/Widget.MaterialComponents.Button"
+        android:text="Dark"
+        app:iconTint="?attr/backgroundColorText"
+        android:textColor="?attr/backgroundColorText"
+        android:backgroundTint="?attr/backgroundColorMode"
         app:icon="@drawable/darkmode"
-        android:text="Night"
         app:iconPadding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/montserrat_extrabold"
+        android:text="MathQuiz"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/buttomMode"
+        app:layout_constraintHorizontal_bias="0.204"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
 
                 Configuration.UI_MODE_NIGHT_NO -> {
                     mode.setIcon(ContextCompat.getDrawable(this,R.drawable.darkmode))
-                    mode.text = "Night"
+                    mode.text = "Dark"
                 }
 
             }
